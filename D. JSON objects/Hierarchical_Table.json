@@ -1,0 +1,123 @@
+// MongoDB Schema in json
+
+{
+  $jsonSchema: {
+     required: [ "expenseId", "expense", "account"],
+     properties: {
+        expenseId: {
+           bsonType: "string",
+           description: "expenseId is used to track each expense record"
+        },
+        expense: {
+           bsonType: "object",
+           required: [ "date", "amount", "category" ],
+           properties: {
+               "date": { bsonType: "string" },
+               "amount": { bsonType: "int" },
+               "category": { 
+                 enum: [ "Food", "Housing", "Transport", "Entertainment", 
+                 "Travel", "Hobby", "Apparel", "Savings", "Insurance", "Miscellaneous" ],
+                 description: "can only be one of the enum values"
+               },
+               "description": { bsonType: "string" },
+               "percentage": { bsonType: "int" }
+           }
+        },
+        account: {
+                 bsonType: "object",
+                 required: [ "accountId", "accountName", "user"],
+                 properties: {
+                     "accountId": { bsonType: "string" },
+                     "accountName": { bsonType: "string" },
+                     "user": {
+				           bsonType: "object",
+				           required: [ "userId", "name", "gender", "dateOfBirth", "state", "budget" ],
+				           properties: {
+				               "userId": { bsonType: "string" },
+				               "name": { bsonType: "string" },
+				               "gender": { bsonType: "string" },
+				               "dateOfBirth": { bsonType: "string" },
+				               "state": { bsonType: "string" },
+				               "budget": {
+				                 bsonType: "object",
+				                 required: [ "startDate", "amount", "period"],
+				                 properties: {
+				                     "startDate": { bsonType: "string" },
+				                     "amount": { bsonType: "int" },
+				                     "period": { 
+				                       enum: [ "Bi-Weekly", "Monthly", "Seasonal", "Annual" ] ,
+				                       description: "can only be one of the enum values"
+				                     },
+				                     "description": { bsonType: "string" }
+				                 }
+				               }
+				           }
+				        }
+                 }
+
+            }
+        }
+     }
+}
+
+// Logical Model Define
+
+{
+ "expenseId": "string",
+ "expense":
+ 	{
+	"date": "string",
+	"amount": "int",
+	"category": 
+		{
+		 // enum 
+ 	 	 "Food"
+ 	 	 "Housing"
+ 	 	 "Transport"
+ 	 	 "Entertainment"
+ 	 	 "Travel"
+ 	 	 "Hobby"
+ 	 	 "Apparel"
+ 	 	 "Savings"
+ 	 	 "Insurance"
+ 	 	 "Miscellaneous"
+ 		}
+	 "description": "string",
+	 "percentage": "int",
+ 	}
+
+ "account": "object"
+	{
+		"accountId": "string",
+		"accountName": "string",
+		"user": "object"
+		 	{
+		 		"userId": "string",
+		 		"name": "string",
+		 		"gender": "string",
+		 		"dateOfBirth": "string",
+		 		"state": "string"
+		 		"budget": "object"
+		 			{
+		 				"startDate": "string",
+		 				"amount": "int",
+		 				"period": 
+		 					{
+							 // enum 
+					 	 	 "Bi-Weekly"
+					 	 	 "Monthly"
+					 	 	 "Seasonal"
+					 	 	 "Annual"
+					 		}
+					 	"description": "string"
+		 			}
+		 	}
+	}
+ 
+}
+
+
+
+
+
+
