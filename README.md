@@ -38,4 +38,4 @@ Tzu-Chi Tai @Sabrina Tai worked on:
 ERD and relational schema
 Generating test data with the help of Mockaroo
 
-Then for the point 8, creating a basic Node + Express application, we implemented together by doing pair programming. All commits are made by Sabrina because we organized everything to do a checkdown before submitting the final work.
+Then for the point 8, creating a basic Node + Express application, we implemented together by doing pair programming. All commits are made by Hannah because we organized everything to do a checkdown before submitting the final work.
