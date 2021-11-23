@@ -28,7 +28,7 @@ A simple demo application on how to combine node + express + mongodb + EJS
 [LucidChart link for ERD](https://lucid.app/lucidchart/2b9924ee-fb2f-4fab-bcd1-8643e0d98fc2/view)
 ![](C.%20ER%20Diagram.png)
 
-![](D.%20JSON%20objects%20/Hierarchical_Tables_to_JSON_Object.png)
+![](D.%20JSON%20objects/Hierarchical_Tables_to_JSON_Object.png)
 
 For the project, we discussed and wrote down the business requirements together, then split the tasks as below:
 
