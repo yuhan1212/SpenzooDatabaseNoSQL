@@ -14,4 +14,5 @@ Team member: YuHan Chi, Tzu-Chi Tai
 
 1. Clone the repository
 2. `npm install`
-3. `npm start`
+3. `npm install mogodb`
+4. `npm start`
